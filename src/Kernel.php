@@ -17,11 +17,19 @@ class Kernel extends BaseKernel
 
     public function getCacheDir()
     {
+        if (in_array($this->environment, array('dev', 'test'))) {
+            return '/home/vagrant/example-project/cache/' .  $this->environment;
+        }
+
         return $this->getProjectDir().'/var/cache/'.$this->environment;
     }
 
     public function getLogDir()
     {
+        if (in_array($this->environment, array('dev', 'test'))) {
+            return '/home/vagrant/example-project/log';
+        }
+
         return $this->getProjectDir().'/var/log';
     }
 
