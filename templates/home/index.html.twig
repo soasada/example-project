@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <form>
+        <select id="selector-example" class="selectpicker" data-live-search="true" data-live-search-normalize="true"
+                data-width="90%" data-size="8">
+        </select>
+    </form>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" language="javascript" src="{{ asset('build/js/home/home.js') }}"></script>
+{% endblock %}
