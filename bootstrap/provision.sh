@@ -20,7 +20,7 @@ rm -f /etc/nginx/sites-enabled/default
 
 echo "server {
     server_name localhost;
-    root /var/www/clickferry/public;
+    root /var/www/example-project/public;
 
     location / {
         try_files \$uri /index.php\$is_args\$args;
@@ -57,9 +57,9 @@ echo "server {
 
     error_log /var/log/nginx/project_error.log;
     access_log /var/log/nginx/project_access.log;
-}" > /etc/nginx/sites-available/clickferry
+}" > /etc/nginx/sites-available/example-project
 
-ln -s /etc/nginx/sites-available/clickferry /etc/nginx/sites-enabled/clickferry
+ln -s /etc/nginx/sites-available/example-project /etc/nginx/sites-enabled/example-project
 rm -f /var/www/html/index.nginx-debian.html
 service nginx restart
 service php7.2-fpm restart
@@ -83,7 +83,7 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password roo
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 apt-get -y install mysql-server
 
-mysql -uroot -proot -e "CREATE DATABASE clickferry"
+mysql -uroot -proot -e "CREATE DATABASE example"
 
 # Install composer
 
