@@ -1,5 +1,4 @@
-import 'bootstrap';
-import 'bootstrap-select';
+// here we have bootstrap imported, thanks to createSharedEntry in webpack.config.js
 
 jQuery(function () {
     let selectorExample = $('#selector-example');
