@@ -17,7 +17,8 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
-    .createSharedEntry('js/app', './assets/js/app.ts')
+    .createSharedEntry('js/common', ['jquery', 'bootstrap', 'bootstrap-select', 'jquery-ui'])
+    .addEntry('js/app', './assets/js/app.ts')
     .addEntry('js/home/home', './assets/js/home/home.ts')
     .addStyleEntry('css/app',['./assets/css/app.css'])
     //.addEntry('page1', './assets/js/page1.js')
