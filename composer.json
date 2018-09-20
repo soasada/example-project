@@ -36,8 +36,7 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true,
-        "vendor-dir": "/home/vagrant/example-project/vendor"
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
