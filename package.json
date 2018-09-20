@@ -26,6 +26,9 @@
         "popper.js": "^1.14.4",
         "ts-loader": "^3.5.0",
         "typeface-montserrat": "^0.0.54",
-        "typescript": "^3.0.3"
+        "typescript": "^3.0.3",
+        "vue": "^2.5.17",
+        "vue-loader": "^15.4.2",
+        "vue-template-compiler": "^2.5.17"
     }
 }
